@@ -278,4 +278,9 @@
   flex-wrap: nowrap;
 }
 
+.footer__socials-icon {
+  width: 48px;
+  height: 48px;
+}
+
 /*-------------------------------FOOTER SECTION END-------------------------------*/
