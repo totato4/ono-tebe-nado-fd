@@ -145,7 +145,7 @@
   display: grid;
   gap: 25px;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 27px;
+  margin-top: 27px;
 }
 .lots__list-item {
   display: flex;
@@ -194,9 +194,15 @@
   height: 240px;
   background-color: #000;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__logo-image {
+  display: block;
+  width: 148px;
+  height: 114px;
 }
 .about__info {
   padding-top: 133px;
