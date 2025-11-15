@@ -9,7 +9,6 @@
 /*-------------------------------HEADER-------------------------------*/
 
 .header {
-  background-color: yellow;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -65,7 +64,7 @@
 .cover {
   min-height: 757px;
   padding: 165px 0px 50px;
-  background-image: url(../assets/lotus-flower.jpg);
+  background-image: url(../images/cover.jpg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -152,7 +151,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(../assets/photo.jpg);
+  background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -193,6 +192,8 @@
   margin-left: 47px;
   width: 240px;
   height: 240px;
+  background-color: #000;
+  border-radius: 50%;
 }
 
 .about__logo-image {
