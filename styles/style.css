@@ -96,16 +96,10 @@ body {
   width: 100%;
 }
 
-.address__tel {
+.address__link {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   text-underline-offset: 4px;
-}
-
-.address__mail {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 3px;
 }
 
 .address__location {
@@ -139,7 +133,6 @@ body {
   gap: 20px;
 
   width: 100%;
-  max-height: 385px;
   height: 100%;
 
   font-weight: 700;
