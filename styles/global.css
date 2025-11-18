@@ -36,3 +36,9 @@ img {
 button {
   font: inherit;
 }
+
+address {
+  font-style: normal; /* убрал дефолтные стили */
+  margin: 0;
+  padding: 0;
+}
