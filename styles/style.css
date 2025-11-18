@@ -1,9 +1,10 @@
 /* место для вашего кода */
 .content-section {
+  box-sizing: border-box;
+
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  box-sizing: border-box;
 }
 
 body {
@@ -12,30 +13,31 @@ body {
 
 .overlay {
   position: absolute;
+  inset: 0;
+  z-index: 0;
 
   background: #000;
   opacity: 0.6;
 
   width: 100%;
   height: 100%;
-  inset: 0;
-  z-index: 0;
 }
 
 /*-------------------------------HEADER-------------------------------*/
 
 .header {
   display: grid;
+  align-items: center;
+
   grid-template-columns: 1fr 1fr 1fr;
   padding: 92px 50px 96px;
-
-  align-items: center;
 }
 
 .header-menu {
   font-weight: 400;
   font-size: 18px;
   color: #000;
+
   align-self: center;
   justify-self: center;
 }
@@ -43,7 +45,8 @@ body {
 .header__links-list {
   display: flex;
   gap: 33px;
-  white-space: nowrap; // перенос текста запрещает
+
+  white-space: nowrap;
 }
 
 .header__links-list-item {
@@ -63,16 +66,18 @@ body {
 
 .header__logo {
   display: block;
+
   width: 138px;
-  /* height: 105px; убираем фиксированную высоту */
   margin-left: 44px;
+
   text-decoration: none;
 }
 
 .header__logo-image {
-  width: 100%;
-  height: auto; /* сохраняет пропорции SVG */
   display: block;
+
+  width: 100%;
+  height: auto;
 }
 
 .address {
@@ -86,15 +91,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-self: end;
+
   max-width: 240px;
   width: 100%;
-  justify-self: end;
 }
 
 .address__tel {
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  text-underline-offset: 4px; // это нужно, чтобы выровнять черту по макету
+  text-underline-offset: 4px;
 }
 
 .address__mail {
@@ -113,27 +119,29 @@ body {
 /*-------------------------------COVER SECTION-------------------------------*/
 
 .cover {
-  min-height: 757px;
-  background-image: url(../images/cover.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
   position: relative;
-  background-size: cover;
   display: flex;
   flex-direction: column;
 
+  min-height: 757px;
   padding: 165px 50px 50px;
+
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .cover__title {
   z-index: 1;
-  /* margin-right: -30px; */
+
   display: flex;
   flex-direction: column;
+  gap: 20px;
+
   width: 100%;
   max-height: 385px;
   height: 100%;
-  gap: 20px;
 
   font-weight: 700;
   font-size: 100px;
@@ -145,7 +153,6 @@ body {
 
 .aligned-text {
   display: block;
-  /* word-spacing: 0.3em; */
 }
 
 .aligned-text_left {
@@ -160,40 +167,40 @@ body {
   text-align: end;
 }
 
-/* .letter-spacing-extended {
-} */
-
 .no-letter-spacing {
   letter-spacing: 0;
 }
 
 .cover__description {
-  margin-top: 106px;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+
+  margin-top: 106px;
 }
 
-.cover__description p {
+.cover__text {
+  color: #fff;
   font-weight: 400;
   font-size: 22px;
   line-height: 127%;
-  text-transform: uppercase;
-  color: #fff;
 
   word-spacing: 18.85px;
+  text-transform: uppercase;
 }
 
 .cover__button {
-  border: 1px solid #fff;
+  color: #fff;
   font-weight: 500;
   font-size: 22px;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
+
   padding: 12px 32px 10px 31px;
 
+  border: 1px solid #fff;
   background-color: transparent;
 }
 
@@ -205,6 +212,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   margin-top: 180px;
   padding: 0px 24px;
 }
@@ -222,6 +230,7 @@ body {
   gap: 25px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 596px;
+
   margin-top: 27px;
 }
 
@@ -234,17 +243,17 @@ body {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  height: 100%;
+  padding: 48px 40px;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 48px 40px;
-  height: 100%;
-
-  position: relative; // точка опоры для overlay со значением absolute
 }
 
 /* картинки для карточек */
@@ -262,33 +271,38 @@ body {
 }
 
 .card__title {
+  z-index: 1;
+
+  color: #fff;
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
+
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #fff;
-  z-index: 1;
 }
 
 .card__text {
+  z-index: 1;
+
+  color: #fff;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
-  color: #fff;
-  z-index: 1;
 }
 
 .lots__look-more-link {
-  margin-top: 30px;
+  color: #000;
   font-weight: 400;
   font-size: 20px;
-  color: #000;
+
+  margin-top: 30px;
   margin-left: 40px;
+
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  text-underline-offset: 4px; // это нужно, чтобы выровнять черту по макету
+  text-underline-offset: 4px;
 }
 
 /* LOTS SECTION END */
@@ -296,23 +310,26 @@ body {
 /* ABOUT SECTION */
 
 .about {
-  margin-top: 120px;
-  width: 100%;
-  padding: 0px 24px;
   display: grid;
   grid-template-columns: 334px 1fr;
+
+  width: 100%;
+  margin-top: 120px;
+  padding: 0px 24px;
 }
 
 .about__logo {
-  margin-top: 35px;
-  width: 240px;
-  height: 240px;
-  background-color: #000;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: center;
+
+  width: 240px;
+  height: 240px;
+  margin-top: 35px;
+
+  background-color: #000;
+  border-radius: 50%;
 }
 
 .about__logo-image {
@@ -322,39 +339,43 @@ body {
 }
 
 .about__column {
-  padding-top: 136px;
-  padding-left: 25px;
   width: 100%;
   max-width: 693px;
+  padding-top: 136px;
+  padding-left: 25px;
+
   text-align: start;
 }
 
 .about__title {
+  color: #000;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
-  color: #000;
 }
 
 .about__text {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 100px;
+
+  color: #000;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
-  color: #000;
+
+  margin-top: 100px;
 }
 
 /*-------------------------------ABOUT SECTION END-------------------------------*/
 
 /*-------------------------------FOOTER-------------------------------*/
 .footer {
-  padding: 0px 50px 82px;
-  margin-top: 180px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  padding: 0px 50px 82px;
+  margin-top: 180px;
 }
 
 .footer__address {
@@ -365,10 +386,11 @@ body {
 /* меню навигации */
 .footer__menu {
   justify-self: center;
+
+  color: #000;
   font-weight: 400;
   font-size: 18px;
   text-align: center;
-  color: #000;
 }
 
 .footer__menu-list {
@@ -378,7 +400,7 @@ body {
 .footer__menu-link {
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  text-underline-offset: 4px; // нижнее подчеркивание выровнял по макету
+  text-underline-offset: 4px;
 }
 
 .footer__menu-link_active {
@@ -391,11 +413,6 @@ body {
   flex-wrap: nowrap;
   list-style: none;
   justify-self: end;
-}
-
-/* ссылки на соц сети */
-
-.footer__social-link {
 }
 
 .footer__social-list-item {
